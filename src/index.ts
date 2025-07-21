@@ -5,4 +5,5 @@ export * from './react/FaceScanner';
 export * from './react/ChallengeIndicator';
 export * from './react/LivenessDetector';
 export * from './ml/tensorflowService';
-export * from './utils/encrypt'; 
+export * from './utils/encrypt';
+export * from './FaceForgeAuth'; 

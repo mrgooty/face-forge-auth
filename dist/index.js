@@ -22,3 +22,4 @@ __exportStar(require("./react/ChallengeIndicator"), exports);
 __exportStar(require("./react/LivenessDetector"), exports);
 __exportStar(require("./ml/tensorflowService"), exports);
 __exportStar(require("./utils/encrypt"), exports);
+__exportStar(require("./FaceForgeAuth"), exports);
