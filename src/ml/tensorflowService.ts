@@ -13,14 +13,15 @@ export class TensorFlowService {
     if (this.initialized) return;
     await tf.setBackend('webgl');
     await tf.ready();
+    // Use MediaPipe runtime and CDN for FaceMesh model
     faceDetector = await faceLandmarksDetection.createDetector(
       faceLandmarksDetection.SupportedModels.MediaPipeFaceMesh,
       {
-        runtime: 'tfjs',
-        refineLandmarks: true // Required for linter and best accuracy
+        runtime: 'mediapipe',
+        solutionPath: 'https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh',
+        refineLandmarks: true // Best accuracy
       }
     );
-    // blazefaceModel = await blazeface.load();
     this.initialized = true;
   }
 
